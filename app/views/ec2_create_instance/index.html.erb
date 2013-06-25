@@ -1,0 +1,38 @@
+<h1>Instance Create</h1>
+
+<div>
+  <p>おそらく作成されました。</p>
+</div>
+
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>ami</th>
+      <th>create</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @ami %></td>
+      <td><%= @create.id %></td>
+    </tr>
+  </tbody>
+</table>
+
+<div>現在のインスタンス</div>
+
+<table border="1">
+  <thead>
+    <th>instance id</th>
+    <th>状態</th>
+  </thead>
+  <tbody>
+    <% @list.each do |k, v| %>
+    <tr>
+      <td><%= k %></td>
+      <td><%= v.to_s %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
